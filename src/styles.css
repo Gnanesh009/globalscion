@@ -1,0 +1,118 @@
+:root {
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* TipTap editor surface — styled here because the editor renders outside MUI. */
+.ProseMirror {
+  min-height: 260px;
+  padding: 18px 20px;
+  outline: none;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #16181d;
+}
+
+.ProseMirror:focus {
+  outline: none;
+}
+
+.ProseMirror > *:first-child {
+  margin-top: 0;
+}
+
+.ProseMirror h2 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 1.6em 0 0.6em;
+}
+
+.ProseMirror h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 1.5em 0 0.5em;
+}
+
+.ProseMirror h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1.4em 0 0.4em;
+}
+
+.ProseMirror p {
+  margin: 0 0 1em;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.4rem;
+  margin: 0 0 1em;
+}
+
+.ProseMirror blockquote {
+  border-left: 3px solid #0e7c86;
+  margin: 1.4em 0;
+  padding-left: 1rem;
+  color: #5a6474;
+  font-style: italic;
+}
+
+.ProseMirror a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.ProseMirror table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  table-layout: fixed;
+}
+
+.ProseMirror th,
+.ProseMirror td {
+  border: 1px solid #e4e7ec;
+  padding: 8px 10px;
+  vertical-align: top;
+}
+
+.ProseMirror th {
+  background: #f7f8fa;
+  font-weight: 700;
+  text-align: left;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  color: #a3abb8;
+  pointer-events: none;
+}
+
+/* Recharts focus outlines are noisy on click; keep them for keyboard only. */
+.recharts-wrapper:focus:not(:focus-visible) {
+  outline: none;
+}

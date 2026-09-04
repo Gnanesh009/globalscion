@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:globalscion.com)",
+      "PowerShell(npm install --no-audit --no-fund)"
+    ]
+  }
+}
